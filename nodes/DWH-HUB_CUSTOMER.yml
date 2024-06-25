@@ -1,0 +1,96 @@
+fileVersion: 1
+id: b1f1e29b-1c92-41a0-b794-fafafd664ead
+name: HUB_CUSTOMER
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b1c09e8-c032-4024-ab65-9dd22b9875e2
+          stepCounter: b1f1e29b-1c92-41a0-b794-fafafd664ead
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_CUSTKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ebb47b51-68a9-4cac-95c4-0f73d48918dd
+                stepCounter: ecdfaf10-733d-4973-aec9-129802bca3d7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63904f45-ab92-4a58-a565-0eb7d441c465
+          stepCounter: b1f1e29b-1c92-41a0-b794-fafafd664ead
+        config:
+          is_Hub_hk: true
+        dataType: STRING
+        description: ""
+        name: sha1_hub_customer
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 469f9863-7aad-4695-9a8a-b0fdf299261e
+                stepCounter: ecdfaf10-733d-4973-aec9-129802bca3d7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 643ee1db-83b8-440b-b68e-d19e718af09e
+          stepCounter: b1f1e29b-1c92-41a0-b794-fafafd664ead
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 924c6268-695c-4851-8a84-ae786c90237c
+                stepCounter: ecdfaf10-733d-4973-aec9-129802bca3d7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 84313263-93fc-45c4-ad5c-e63eecf84e74
+          stepCounter: b1f1e29b-1c92-41a0-b794-fafafd664ead
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6293e3d7-0ba9-44a5-a80f-962cdfc8ed09
+                stepCounter: ecdfaf10-733d-4973-aec9-129802bca3d7
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DVSTG_CUSTOMER: ecdfaf10-733d-4973-aec9-129802bca3d7
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: DVSTG_CUSTOMER
+        join:
+          joinCondition: FROM {{ ref('DWH', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
+        name: HUB_CUSTOMER
+        noLinkRefs: []
+  name: HUB_CUSTOMER
+  overrideSQL: false
+  schema: ""
+  sqlType: data-vault:::6
+  type: sql
+  version: 1
+type: Node
