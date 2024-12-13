@@ -69,8 +69,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2506e42a-e19a-4794-b57e-3bf64f138ea2
-                stepCounter: ef46acb4-683f-4539-8e66-ef9a69a56e69
+              - columnCounter: 76edd641-25d7-4a95-b433-d372aae01e81
+                stepCounter: 937bd339-2393-43d5-9067-07e719e009b8
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -83,8 +83,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 3b6faa4c-893b-4cfe-bbf0-abcd3e28d68a
-                stepCounter: ef46acb4-683f-4539-8e66-ef9a69a56e69
+              - columnCounter: ea6e8ddf-dc5e-42b4-a40a-798c0919c033
+                stepCounter: 937bd339-2393-43d5-9067-07e719e009b8
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -97,8 +97,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: b8f3962b-c0b2-454b-8007-8c574b9c5fc8
-                stepCounter: ef46acb4-683f-4539-8e66-ef9a69a56e69
+              - columnCounter: 763a9e32-618f-4313-8181-f1af6fc180e8
+                stepCounter: 937bd339-2393-43d5-9067-07e719e009b8
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -111,8 +111,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 4e071509-55f4-476b-8534-7590324bb2bd
-                stepCounter: ef46acb4-683f-4539-8e66-ef9a69a56e69
+              - columnCounter: fbe4dae4-c346-422e-a4fe-609053a4eeb6
+                stepCounter: 937bd339-2393-43d5-9067-07e719e009b8
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -125,8 +125,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 4bd928bf-5f7d-4393-a772-65a9de716bd9
-                stepCounter: ef46acb4-683f-4539-8e66-ef9a69a56e69
+              - columnCounter: 3c5462f1-adf4-498c-b19a-2af5d03ec4b0
+                stepCounter: 937bd339-2393-43d5-9067-07e719e009b8
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -139,8 +139,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 30c96bf5-76a0-4272-a883-13c433ff77a0
-                stepCounter: ef46acb4-683f-4539-8e66-ef9a69a56e69
+              - columnCounter: c7a9de4a-6a1a-40d2-a8dd-64acb05004fc
+                stepCounter: 937bd339-2393-43d5-9067-07e719e009b8
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -153,8 +153,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 21567fc2-776c-4c36-9a87-7c405ae86f7f
-                stepCounter: ef46acb4-683f-4539-8e66-ef9a69a56e69
+              - columnCounter: 163dafdd-f7fd-4561-b0d5-944a53f3a956
+                stepCounter: 937bd339-2393-43d5-9067-07e719e009b8
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -167,8 +167,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 8f6d8b15-2ae3-485c-bba2-985821987993
-                stepCounter: ef46acb4-683f-4539-8e66-ef9a69a56e69
+              - columnCounter: a1a76211-6e95-4916-b555-b992979e5022
+                stepCounter: 937bd339-2393-43d5-9067-07e719e009b8
             transform: ""
       - acceptedValues:
           strictMatch: true
@@ -230,14 +230,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          STG_CUSTOMER: 937bd339-2393-43d5-9067-07e719e009b8
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: SOURCE
-            nodeName: CUSTOMER
+          - locationName: DWH
+            nodeName: STG_CUSTOMER
         join:
-          joinCondition: FROM {{ ref('SOURCE', 'CUSTOMER') }} "CUSTOMER"
+          joinCondition: FROM {{ ref('DWH', 'STG_CUSTOMER') }} "STG_CUSTOMER"
         name: DVSTG_CUSTOMER
         noLinkRefs: []
   name: DVSTG_CUSTOMER

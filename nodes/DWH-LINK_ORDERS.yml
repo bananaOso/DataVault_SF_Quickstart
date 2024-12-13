@@ -34,7 +34,8 @@ operation:
         columnReference:
           columnCounter: 176f3b1c-9829-4083-bd48-ebe42f3d28c1
           stepCounter: 4b09213c-10e8-4555-84cb-30bdb82ccc1a
-        config: {}
+        config:
+          is_Link_hk: true
         dataType: STRING
         description: ""
         name: SHA1_LNK_ORDER_CUSTOMER
