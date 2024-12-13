@@ -55,12 +55,6 @@ operation:
             stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
           - columnCounter: e74d2cbd-2416-45cf-b937-644fdb89acc0
             stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
-          - columnCounter: a17b0792-3fed-4fa4-b933-2827fa9973be
-            stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
-          - columnCounter: 67264a57-9fd9-4863-b20d-2640b85b10b2
-            stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
-          - columnCounter: 3076bf8e-add4-43f1-8a52-55c60ab18736
-            stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
         name: CUSTOMER_HASH_DIFF
         nullable: true
         sourceColumnReferences: []

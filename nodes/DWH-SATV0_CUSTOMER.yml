@@ -76,34 +76,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1e833390-fff3-4d2a-92ac-efed96b7124d
-          stepCounter: 99d94ab3-e608-4171-8b9c-4c82d5740df3
-        config: {}
-        dataType: VARCHAR(117)
-        description: ""
-        name: C_COMMENT
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 3076bf8e-add4-43f1-8a52-55c60ab18736
-                stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3c64d2a0-29fd-4294-8a81-2f5f7e725212
-          stepCounter: 99d94ab3-e608-4171-8b9c-4c82d5740df3
-        config: {}
-        dataType: VARCHAR(10)
-        description: ""
-        name: C_MKTSEGMENT
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 67264a57-9fd9-4863-b20d-2640b85b10b2
-                stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 302810af-5a46-4041-8f2f-a28f78a1e7be
           stepCounter: 99d94ab3-e608-4171-8b9c-4c82d5740df3
         config: {}
@@ -114,20 +86,6 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: e74d2cbd-2416-45cf-b937-644fdb89acc0
-                stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 4d71ea75-2a36-4d1b-8d58-589893465be2
-          stepCounter: 99d94ab3-e608-4171-8b9c-4c82d5740df3
-        config: {}
-        dataType: NUMBER(12,2)
-        description: ""
-        name: C_ACCTBAL
-        nullable: false
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: a17b0792-3fed-4fa4-b933-2827fa9973be
                 stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
             transform: ""
       - appliedColumnTests: {}
