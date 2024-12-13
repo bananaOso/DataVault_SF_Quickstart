@@ -1,6 +1,6 @@
 fileVersion: 1
-id: d13b3886-2a67-4a0a-b367-447b4bed620c
-name: HUB_CUSTOMER
+id: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+name: HUB_ORDER
 operation:
   config:
     disable_hwm: true
@@ -18,37 +18,37 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f2e0e6de-2344-4c3f-a87c-5056a404933a
-          stepCounter: d13b3886-2a67-4a0a-b367-447b4bed620c
+          columnCounter: 7a27fb15-80a7-442b-ab1b-1c28937385fa
+          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
         config:
           is_Hub_hk: true
         dataType: STRING
         description: ""
-        name: SHA1_HUB_CUSTOMER
+        name: SHA1_HUB_ORDER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: e7b76375-91ba-4eee-a518-9c94c8e18f2c
-                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+              - columnCounter: 0bb000a4-9cbe-40d4-93e9-60cf28c03154
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: bd13cb7b-938d-4efe-8f15-065adb564f4f
-          stepCounter: d13b3886-2a67-4a0a-b367-447b4bed620c
+          columnCounter: 730ae58d-cbde-420f-b529-2ddd7374dbbe
+          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
         config: {}
         dataType: NUMBER(38,0)
         description: ""
-        name: C_CUSTKEY
-        nullable: false
+        name: O_ORDERKEY
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: b8870b00-0896-48db-8038-a2b7d1236e85
-                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+              - columnCounter: acac9d65-9985-4606-9f51-b496cab0c154
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: e4566ec5-af41-4d26-93a9-203c59500212
-          stepCounter: d13b3886-2a67-4a0a-b367-447b4bed620c
+          columnCounter: 92b63739-55e4-497b-b815-5e43d047ac57
+          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
         config: {}
         dataType: TIMESTAMP
         description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
@@ -56,13 +56,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: bfa87f89-6f73-4402-a49d-5f1fcd843ebf
-                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+              - columnCounter: 1b38cec1-f626-48bf-9d40-73f372456fb2
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: fe74916d-7bf2-489a-a334-808f15c4abc8
-          stepCounter: d13b3886-2a67-4a0a-b367-447b4bed620c
+          columnCounter: 101d7162-e716-4d8e-bcd3-169566f48953
+          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
         config: {}
         dataType: STRING
         description: The Record Source (RSRC) describes the source of this data.
@@ -70,8 +70,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 67ed0238-ceee-4d2c-b262-4bbe8a9625c1
-                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+              - columnCounter: 31e4760f-daf2-4eee-8dec-46b6eb2938f0
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
@@ -81,12 +81,12 @@ operation:
           customSQL: ""
         dependencies:
           - locationName: DWH
-            nodeName: DVSTG_CUSTOMER
+            nodeName: DVSTG_ORDERS
         join:
-          joinCondition: FROM {{ ref('DWH', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
-        name: HUB_CUSTOMER
+          joinCondition: FROM {{ ref('DWH', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
+        name: HUB_ORDER
         noLinkRefs: []
-  name: HUB_CUSTOMER
+  name: HUB_ORDER
   overrideSQL: false
   schema: ""
   sqlType: data-vault:::6

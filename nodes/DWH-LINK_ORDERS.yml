@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 1dca8d6a-04d8-4c3a-ab29-441ab4f9e724
+id: d87c3b00-671a-441a-a7e5-49a2c79f2d39
 name: LINK_ORDERS
 operation:
   config:
@@ -18,65 +18,51 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3c8d842a-6433-4df7-86b6-bf567f58045a
-          stepCounter: 1dca8d6a-04d8-4c3a-ab29-441ab4f9e724
+          columnCounter: 6a2c3cb7-adfc-4933-b7a8-da0eabedd84e
+          stepCounter: d87c3b00-671a-441a-a7e5-49a2c79f2d39
         config:
           is_Link_hk: true
         dataType: STRING
         description: ""
-        name: sha1_lnk_customer_order
+        name: SHA1_LNK_ORDER_CUSTOMER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2021381c-e17f-4964-9c89-9e17ecbdcea2
-                stepCounter: b51cc38a-a4c5-46f8-8099-f2b46ed1006d
+              - columnCounter: 08793039-044a-44ba-ad72-5c7a3a482c2d
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8d25a18f-896a-4b94-96c4-f215505dae23
-          stepCounter: 1dca8d6a-04d8-4c3a-ab29-441ab4f9e724
+          columnCounter: 533b4dc7-d13f-4abb-8003-dd2199b9ef71
+          stepCounter: d87c3b00-671a-441a-a7e5-49a2c79f2d39
         config: {}
         dataType: STRING
         description: ""
-        name: sha1_hub_customer
+        name: SHA1_HUB_CUSTOMER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2cd3d6e5-1420-4a28-ad1c-946e29d566fd
-                stepCounter: b51cc38a-a4c5-46f8-8099-f2b46ed1006d
+              - columnCounter: dc1e738e-0a14-49bc-a074-adace49e09d6
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: ee2ff7f6-dee9-483d-87b1-4eb78aa59f9d
-          stepCounter: 1dca8d6a-04d8-4c3a-ab29-441ab4f9e724
+          columnCounter: 779e8b46-a7a0-4182-93f5-97b9d50005fa
+          stepCounter: d87c3b00-671a-441a-a7e5-49a2c79f2d39
         config: {}
         dataType: STRING
         description: ""
-        name: sha1_hub_order
+        name: SHA1_HUB_ORDER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 95b1bf53-6f87-477d-8764-352d679e05ea
-                stepCounter: b51cc38a-a4c5-46f8-8099-f2b46ed1006d
+              - columnCounter: 0bb000a4-9cbe-40d4-93e9-60cf28c03154
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 4929c933-fb5f-4d3d-9522-b85443f059ea
-          stepCounter: 1dca8d6a-04d8-4c3a-ab29-441ab4f9e724
-        config: {}
-        dataType: STRING
-        description: The Record Source (RSRC) describes the source of this data.
-        name: RSRC
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 997ffc4d-0090-4023-9132-3fa7aef37ac6
-                stepCounter: b51cc38a-a4c5-46f8-8099-f2b46ed1006d
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: f7115539-7b4d-4c29-9742-6d1c15e81872
-          stepCounter: 1dca8d6a-04d8-4c3a-ab29-441ab4f9e724
+          columnCounter: 02ba8f08-d1e7-430a-ae84-77ffa397aa74
+          stepCounter: d87c3b00-671a-441a-a7e5-49a2c79f2d39
         config: {}
         dataType: TIMESTAMP
         description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
@@ -84,8 +70,22 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 3ab6a11d-03e3-4a13-87ff-c9d608310d5d
-                stepCounter: b51cc38a-a4c5-46f8-8099-f2b46ed1006d
+              - columnCounter: 1b38cec1-f626-48bf-9d40-73f372456fb2
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 04bed939-1b5b-4a19-8b3d-30d6675cea5c
+          stepCounter: d87c3b00-671a-441a-a7e5-49a2c79f2d39
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 31e4760f-daf2-4eee-8dec-46b6eb2938f0
+                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []

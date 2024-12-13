@@ -1,5 +1,5 @@
 fileVersion: 1
-id: f8a39995-99eb-4cbd-857f-435a57322f39
+id: e2708152-3259-42df-a769-0b145f55c8ae
 name: DVSTG_REGION
 operation:
   config:
@@ -16,8 +16,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8572ae39-2a30-4caf-9b1d-1b576a8c01f1
-          stepCounter: f8a39995-99eb-4cbd-857f-435a57322f39
+          columnCounter: 9882e085-c505-44bf-aeac-7166f71651be
+          stepCounter: e2708152-3259-42df-a769-0b145f55c8ae
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -30,8 +30,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c103091a-5204-470d-bdbc-e463c4755893
-          stepCounter: f8a39995-99eb-4cbd-857f-435a57322f39
+          columnCounter: 92698455-075b-4937-8017-82e7ade2af99
+          stepCounter: e2708152-3259-42df-a769-0b145f55c8ae
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -44,8 +44,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 152983a3-4c85-4c66-98d7-b4e602289507
-          stepCounter: f8a39995-99eb-4cbd-857f-435a57322f39
+          columnCounter: d916f73c-07d4-4553-a6b4-86f3fa97cf91
+          stepCounter: e2708152-3259-42df-a769-0b145f55c8ae
         config: {}
         dataType: VARCHAR(152)
         description: ""
@@ -61,8 +61,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 135f54c1-5871-4eda-b013-7dff5ff027d0
-          stepCounter: f8a39995-99eb-4cbd-857f-435a57322f39
+          columnCounter: 0830edcb-8d91-4a1b-9718-8b9462521aed
+          stepCounter: e2708152-3259-42df-a769-0b145f55c8ae
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -78,8 +78,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 30afc3a1-b5ff-47d8-bf22-547a407c01c4
-          stepCounter: f8a39995-99eb-4cbd-857f-435a57322f39
+          columnCounter: 694cf401-3a6d-40be-8c28-86e0bd2570e7
+          stepCounter: e2708152-3259-42df-a769-0b145f55c8ae
         config: {}
         dataType: STRING
         defaultValue: ""

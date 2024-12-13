@@ -1,5 +1,5 @@
 fileVersion: 1
-id: e4bf950c-244c-4259-9fd4-81b69fd3277b
+id: 979ca810-547c-4962-8d27-f2f4463a96aa
 name: DVSTG_NATION
 operation:
   config:
@@ -16,8 +16,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3c48caa6-3914-4d01-b51f-95cd1141c607
-          stepCounter: e4bf950c-244c-4259-9fd4-81b69fd3277b
+          columnCounter: 7730b210-6453-4e6b-8557-e311c455f106
+          stepCounter: 979ca810-547c-4962-8d27-f2f4463a96aa
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -30,8 +30,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: eb64781e-0282-40f6-a6ef-a7cdfb21e19d
-          stepCounter: e4bf950c-244c-4259-9fd4-81b69fd3277b
+          columnCounter: 1d50414b-4d87-4729-adcc-2b10c95ee6de
+          stepCounter: 979ca810-547c-4962-8d27-f2f4463a96aa
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -44,8 +44,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 85341530-5e35-427d-a079-9b67b7ba0f8e
-          stepCounter: e4bf950c-244c-4259-9fd4-81b69fd3277b
+          columnCounter: 82b5a396-c241-4317-9f8d-2cbdb6080d4b
+          stepCounter: 979ca810-547c-4962-8d27-f2f4463a96aa
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -58,8 +58,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f54ec7e6-9d02-4613-8d56-b9421ea2afed
-          stepCounter: e4bf950c-244c-4259-9fd4-81b69fd3277b
+          columnCounter: fc459fac-92f5-424e-aa41-15c01c3b6dc0
+          stepCounter: 979ca810-547c-4962-8d27-f2f4463a96aa
         config: {}
         dataType: VARCHAR(152)
         description: ""
@@ -75,8 +75,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7c7c124e-ccc7-4417-aba4-93a4308a2907
-          stepCounter: e4bf950c-244c-4259-9fd4-81b69fd3277b
+          columnCounter: 552bf1b6-da13-40a6-bd3d-b7fd4d18a116
+          stepCounter: 979ca810-547c-4962-8d27-f2f4463a96aa
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -92,8 +92,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7a74442e-3ff0-4201-83e8-b986a4a62a20
-          stepCounter: e4bf950c-244c-4259-9fd4-81b69fd3277b
+          columnCounter: 90b0a9a5-acd7-4826-98a4-9ef07b65331e
+          stepCounter: 979ca810-547c-4962-8d27-f2f4463a96aa
         config: {}
         dataType: STRING
         defaultValue: ""
