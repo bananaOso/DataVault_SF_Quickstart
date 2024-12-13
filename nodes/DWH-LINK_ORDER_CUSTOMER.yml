@@ -1,6 +1,6 @@
 fileVersion: 1
 id: d87c3b00-671a-441a-a7e5-49a2c79f2d39
-name: LINK_ORDERS
+name: LINK_ORDER_CUSTOMER
 operation:
   config:
     disable_hwm: true
@@ -98,9 +98,9 @@ operation:
             nodeName: DVSTG_ORDERS
         join:
           joinCondition: FROM {{ ref('DWH', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
-        name: LINK_ORDERS
+        name: LINK_ORDER_CUSTOMER
         noLinkRefs: []
-  name: LINK_ORDERS
+  name: LINK_ORDER_CUSTOMER
   overrideSQL: false
   schema: ""
   sqlType: data-vault:::7

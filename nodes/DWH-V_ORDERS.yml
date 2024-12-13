@@ -186,18 +186,22 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: |-
-              CASE 
-                  WHEN O_ORDERPRIORITY IN ('2-HIGH', '1-URGENT')             
-                  AND O_TOTALPRICE >= 200000 
-                  THEN 'Tier-1'
+            transform: |+
+              CASE
+                 WHEN O_ORDERPRIORITY IN ('2-HIGH', '1-URGENT')            
+                 AND O_TOTALPRICE >= 200000
+                 THEN 'Tier-1'
 
-                  WHEN O_ORDERPRIORITY IN ('3-MEDIUM', '2-HIGH', '1-URGENT') 
-                  AND O_TOTALPRICE BETWEEN 150000 AND 200000 
-                  THEN 'Tier-2'  
-                  
-                  ELSE 'Tier-3'
+
+                 WHEN O_ORDERPRIORITY IN ('3-MEDIUM', '2-HIGH', '1-URGENT')
+                 AND O_TOTALPRICE BETWEEN 150000 AND 200000
+                 THEN 'Tier-2' 
+                
+                 ELSE 'Tier-3'
               END
+
+
+
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
