@@ -1,6 +1,6 @@
 fileVersion: 1
-id: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
-name: HUB_ORDER
+id: f29ee0e9-c455-4040-8c00-55fc76186111
+name: HUB_ORDERS
 operation:
   config:
     disable_hwm: true
@@ -18,8 +18,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 7a27fb15-80a7-442b-ab1b-1c28937385fa
-          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+          columnCounter: 3547c28d-374f-4a17-b39b-74fb446b66e8
+          stepCounter: f29ee0e9-c455-4040-8c00-55fc76186111
         config:
           is_Hub_hk: true
         dataType: STRING
@@ -28,13 +28,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 0bb000a4-9cbe-40d4-93e9-60cf28c03154
-                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+              - columnCounter: 093f725c-a0a7-4f8a-9c0d-fedbbd1db0ea
+                stepCounter: 92e34193-422a-4048-80e5-78d1c0c95bfc
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 730ae58d-cbde-420f-b529-2ddd7374dbbe
-          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+          columnCounter: 78f0766f-de9f-44e8-a7a8-c865e89c70f5
+          stepCounter: f29ee0e9-c455-4040-8c00-55fc76186111
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -42,13 +42,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: acac9d65-9985-4606-9f51-b496cab0c154
-                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+              - columnCounter: 2e5353ca-6f97-4220-bef2-720055af9439
+                stepCounter: 92e34193-422a-4048-80e5-78d1c0c95bfc
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 92b63739-55e4-497b-b815-5e43d047ac57
-          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+          columnCounter: 198ddc7b-89fd-4baf-8be7-04db62037513
+          stepCounter: f29ee0e9-c455-4040-8c00-55fc76186111
         config: {}
         dataType: TIMESTAMP
         description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
@@ -56,13 +56,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 1b38cec1-f626-48bf-9d40-73f372456fb2
-                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+              - columnCounter: d4f98115-2a2a-4b71-9190-b328c0f8b727
+                stepCounter: 92e34193-422a-4048-80e5-78d1c0c95bfc
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 101d7162-e716-4d8e-bcd3-169566f48953
-          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+          columnCounter: 67f7892d-cd6a-421d-9ff5-95607f5ca266
+          stepCounter: f29ee0e9-c455-4040-8c00-55fc76186111
         config: {}
         dataType: STRING
         description: The Record Source (RSRC) describes the source of this data.
@@ -70,8 +70,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 31e4760f-daf2-4eee-8dec-46b6eb2938f0
-                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+              - columnCounter: fdded629-3f42-4ba1-a473-ccb78ab650f3
+                stepCounter: 92e34193-422a-4048-80e5-78d1c0c95bfc
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
@@ -84,9 +84,9 @@ operation:
             nodeName: DVSTG_ORDERS
         join:
           joinCondition: FROM {{ ref('DWH', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
-        name: HUB_ORDER
+        name: HUB_ORDERS
         noLinkRefs: []
-  name: HUB_ORDER
+  name: HUB_ORDERS
   overrideSQL: false
   schema: ""
   sqlType: data-vault:::6

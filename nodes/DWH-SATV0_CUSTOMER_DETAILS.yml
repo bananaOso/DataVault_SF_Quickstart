@@ -1,0 +1,108 @@
+fileVersion: 1
+id: 981676d9-6134-41ce-96b2-759da498ce74
+name: SATV0_CUSTOMER_DETAILS
+operation:
+  config:
+    disable_hwm: false
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dedbef35-26a5-4124-b104-b8d819cc763d
+          stepCounter: 981676d9-6134-41ce-96b2-759da498ce74
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CUSTOMER_DETAILS_HASH_DIFF
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6724a413-f00d-481b-8af0-3bb2ad244167
+                stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 320a238c-3a8a-41cf-bb6a-3e343825c5c8
+          stepCounter: 981676d9-6134-41ce-96b2-759da498ce74
+        config: {}
+        dataType: VARCHAR(117)
+        description: ""
+        name: C_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3076bf8e-add4-43f1-8a52-55c60ab18736
+                stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 066bd01f-080b-460d-a9ed-fae2cc384c92
+          stepCounter: 981676d9-6134-41ce-96b2-759da498ce74
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: C_MKTSEGMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67264a57-9fd9-4863-b20d-2640b85b10b2
+                stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5507de4c-92cf-4015-a426-d38e1c93a01f
+          stepCounter: 981676d9-6134-41ce-96b2-759da498ce74
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        name: C_ACCTBAL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a17b0792-3fed-4fa4-b933-2827fa9973be
+                stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa950469-fb8f-4cb8-8b09-8157d4acd827
+          stepCounter: 981676d9-6134-41ce-96b2-759da498ce74
+        config: {}
+        dataType: STRING
+        description: ""
+        name: SHA1_HUB_CUSTOMER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7cb592e7-59a6-4cf8-b852-60b6ac73ff8e
+                stepCounter: e4796ce4-2a01-4b95-8d71-dc0121304f1b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: DVSTG_CUSTOMER
+        join:
+          joinCondition: FROM {{ ref('DWH', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
+        name: SATV0_CUSTOMER_DETAILS
+        noLinkRefs: []
+  name: SATV0_CUSTOMER_DETAILS
+  overrideSQL: false
+  schema: ""
+  sqlType: data-vault:::8
+  type: sql
+  version: 1
+type: Node
