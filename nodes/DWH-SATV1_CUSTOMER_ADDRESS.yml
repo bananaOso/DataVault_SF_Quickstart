@@ -1,0 +1,166 @@
+fileVersion: 1
+id: fff2523b-2397-42af-8d8c-8eb16262405c
+name: SATV1_CUSTOMER_ADDRESS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0ab3639-4d8a-4c80-aec1-c5e75f429cce
+          stepCounter: fff2523b-2397-42af-8d8c-8eb16262405c
+        config:
+          is_hk: true
+        dataType: STRING
+        description: ""
+        name: SHA1_HUB_CUSTOMER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5dc28b82-552a-4ca3-b005-4178e65b1124
+                stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88d66b30-7d78-4cd6-b2bc-7d911be10d1e
+          stepCounter: fff2523b-2397-42af-8d8c-8eb16262405c
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CUSTOMER_ADDRESS_HASH_DIFF
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16768183-5aa9-45d6-bb5a-7baff01fcdcc
+                stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f4d1f52-257a-4f02-9499-0bf949e7e6ac
+          stepCounter: fff2523b-2397-42af-8d8c-8eb16262405c
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ab6a0e5-cd96-41a7-9f2a-245b06b3cbf6
+                stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd4f02ce-9f3a-48b2-a0a1-555f533e950a
+          stepCounter: fff2523b-2397-42af-8d8c-8eb16262405c
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 230b5b30-aea8-4f31-a4f3-7ca43e532132
+                stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c91a42a5-d19f-4e76-83dc-6c9570f409e4
+          stepCounter: fff2523b-2397-42af-8d8c-8eb16262405c
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: C_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c59f000-1c97-4ab8-86ef-7f8c6140fe4c
+                stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 801d7da6-8a48-430d-87ae-5c33dff8df27
+          stepCounter: fff2523b-2397-42af-8d8c-8eb16262405c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 32082a8a-b4c1-40a2-b3bd-21d890df32db
+                stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75f50c10-8694-406e-a9ea-f08a2afdf401
+          stepCounter: fff2523b-2397-42af-8d8c-8eb16262405c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        is_system_ledts: true
+        name: LEDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: |-
+              COALESCE(LEAD("{{ datavault4coalesce.config.ldts_alias }}" - INTERVAL '1 MICROSECOND') 
+              OVER (PARTITION BY "{{ get_value_by_column_attribute("is_hk") }}" 
+              ORDER BY "{{ datavault4coalesce.config.ldts_alias }}"), {{ datavault4coalesce__string_to_timestamp(datavault4coalesce.config.timestamp_format, datavault4coalesce.config.end_of_all_times) }})
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 706b308f-2ac6-43f2-bbaa-58d95699ef19
+          stepCounter: fff2523b-2397-42af-8d8c-8eb16262405c
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        is_system_current_col: true
+        name: IS_CURRENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: |-
+              CASE 
+                WHEN 
+                  LEAD("{{ datavault4coalesce.config.ldts_alias }}" - INTERVAL '1 MICROSECOND') 
+                  OVER (PARTITION BY "{{ get_value_by_column_attribute("is_hk") }}" 
+                  ORDER BY "{{ datavault4coalesce.config.ldts_alias }}") IS NULL 
+                THEN TRUE 
+                ELSE FALSE 
+              END
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: SATV0_CUSTOMER_ADDRESS
+        join:
+          joinCondition: FROM {{ ref('DWH', 'SATV0_CUSTOMER_ADDRESS') }} "SATV0_CUSTOMER_ADDRESS"
+        name: SATV1_CUSTOMER_ADDRESS
+        noLinkRefs: []
+  name: SATV1_CUSTOMER_ADDRESS
+  overrideSQL: false
+  schema: ""
+  sqlType: DV-115:::9
+  type: sql
+  version: 1
+type: Node

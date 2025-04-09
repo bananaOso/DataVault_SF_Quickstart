@@ -1,6 +1,6 @@
 fileVersion: 1
 id: cf93cf66-5afc-46bb-8734-0a46cc33fc64
-name: SATV0_CUSTOMER
+name: SATV0_CUSTOMER_DETAILS
 operation:
   config:
     disable_hwm: false
@@ -33,6 +33,21 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 93791a8f-50cf-43b7-9f11-fe5a976461ce
+          stepCounter: cf93cf66-5afc-46bb-8734-0a46cc33fc64
+        config:
+          is_hd: true
+        dataType: STRING
+        description: ""
+        name: CUSTOMER_HASH_DIFF
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f64eb194-b608-4cd1-8ecf-d3badfd0ca38
+                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: f030da7f-1a90-4987-9810-c3261a9fce69
           stepCounter: cf93cf66-5afc-46bb-8734-0a46cc33fc64
         config: {}
@@ -61,21 +76,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 93791a8f-50cf-43b7-9f11-fe5a976461ce
-          stepCounter: cf93cf66-5afc-46bb-8734-0a46cc33fc64
-        config:
-          is_hd: true
-        dataType: STRING
-        description: ""
-        name: CUSTOMER_HASH_DIFF
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: f64eb194-b608-4cd1-8ecf-d3badfd0ca38
-                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 883850c9-846a-468b-a369-fcc3e44e9e73
           stepCounter: cf93cf66-5afc-46bb-8734-0a46cc33fc64
         config: {}
@@ -86,34 +86,6 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 0b865501-3d05-489c-8c7d-dba33b8d30bc
-                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: e4577834-78f7-433a-aa7c-69fca1dc12c8
-          stepCounter: cf93cf66-5afc-46bb-8734-0a46cc33fc64
-        config: {}
-        dataType: VARCHAR(40)
-        description: ""
-        name: C_ADDRESS
-        nullable: false
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 6fc1f428-2808-48f6-af94-2aeadbab4522
-                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 43f8cb6a-2dda-4762-ace5-49680977cd02
-          stepCounter: cf93cf66-5afc-46bb-8734-0a46cc33fc64
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: C_NATIONKEY
-        nullable: false
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 05d488ac-ca66-4235-b986-dd17229eefb0
                 stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
             transform: ""
       - appliedColumnTests: {}
@@ -183,9 +155,9 @@ operation:
             nodeName: DVSTG_CUSTOMER
         join:
           joinCondition: FROM {{ ref('DWH', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
-        name: SATV0_CUSTOMER
+        name: SATV0_CUSTOMER_DETAILS
         noLinkRefs: []
-  name: SATV0_CUSTOMER
+  name: SATV0_CUSTOMER_DETAILS
   overrideSQL: false
   schema: ""
   sqlType: data-vault:::8

@@ -1,0 +1,124 @@
+fileVersion: 1
+id: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+name: SATV0_CUSTOMER_ADDRESS
+operation:
+  config:
+    disable_hwm: false
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5dc28b82-552a-4ca3-b005-4178e65b1124
+          stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+        config:
+          is_hk: true
+        dataType: STRING
+        description: ""
+        name: SHA1_HUB_CUSTOMER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e7b76375-91ba-4eee-a518-9c94c8e18f2c
+                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16768183-5aa9-45d6-bb5a-7baff01fcdcc
+          stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+        config:
+          is_hd: true
+        dataType: STRING
+        description: ""
+        name: CUSTOMER_ADDRESS_HASH_DIFF
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0f6c055f-10aa-4a69-8254-ff90fbbbbda8
+                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ab6a0e5-cd96-41a7-9f2a-245b06b3cbf6
+          stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bfa87f89-6f73-4402-a49d-5f1fcd843ebf
+                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 230b5b30-aea8-4f31-a4f3-7ca43e532132
+          stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67ed0238-ceee-4d2c-b262-4bbe8a9625c1
+                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c59f000-1c97-4ab8-86ef-7f8c6140fe4c
+          stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: C_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6fc1f428-2808-48f6-af94-2aeadbab4522
+                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32082a8a-b4c1-40a2-b3bd-21d890df32db
+          stepCounter: 8b6a4b7a-9b0b-43dd-bf69-729d644c85ee
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 05d488ac-ca66-4235-b986-dd17229eefb0
+                stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: DVSTG_CUSTOMER
+        join:
+          joinCondition: FROM {{ ref('DWH', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
+        name: SATV0_CUSTOMER_ADDRESS
+        noLinkRefs: []
+  name: SATV0_CUSTOMER_ADDRESS
+  overrideSQL: false
+  schema: ""
+  sqlType: DV-115:::8
+  type: sql
+  version: 1
+type: Node

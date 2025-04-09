@@ -1,0 +1,187 @@
+fileVersion: 1
+id: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+name: V_ORDER_CUSTOMER
+operation:
+  config:
+    insertStrategy: UNION
+    postSQL: null
+    preSQL: null
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d0a3294-8ca8-4581-85e2-e3ad6c07c1de
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: C_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5521bd48-46d6-4574-8722-ded20d11af0d
+                stepCounter: 0d333458-70c7-4d11-bdf9-34d1d1b2c236
+            transform: right("SATV1_CUSTOMER_DETAILS"."C_NAME",9)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 89f0e596-0933-451f-879a-893fa0992e80
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: C_MKTSEGMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8de50aaf-3fa1-4739-8264-ea6e648c3d25
+                stepCounter: 0d333458-70c7-4d11-bdf9-34d1d1b2c236
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 59b42987-8b5b-4acc-b56e-e0a1860c46ac
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: DATE
+        description: ""
+        name: O_ORDERDATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e5ec6c7-7ef6-4b18-941a-3e346ce30148
+                stepCounter: 966c46a9-c4c0-4558-b039-9439ee4852c7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2194fd82-07a4-4477-96a1-e4516f3af6a6
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: VARCHAR(1)
+        description: ""
+        name: O_ORDERSTATUS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 81dfae50-9a81-45c5-a674-68208c32892b
+                stepCounter: 966c46a9-c4c0-4558-b039-9439ee4852c7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69777858-5ffe-419c-8006-9cd9619e2c49
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: O_CLERK
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0b8785d7-db68-4497-858b-144ee17bc746
+                stepCounter: 966c46a9-c4c0-4558-b039-9439ee4852c7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c49b6f5-955e-4b92-91b8-061592d6bce7
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: O_SHIPPRIORITY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c56095c8-2524-4b12-88f7-ca7aee167ba4
+                stepCounter: 966c46a9-c4c0-4558-b039-9439ee4852c7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3d8a529-22c3-42ac-9885-2e929aac519e
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: VARCHAR(79)
+        description: ""
+        name: O_COMMENT
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9fb6c7b2-2534-457b-96e0-017dc81587c1
+                stepCounter: 966c46a9-c4c0-4558-b039-9439ee4852c7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f57df19-da85-4c92-939b-b1b488bd7a37
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: C_PHONE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de16e0a7-c484-4d53-87e4-12a1e9598007
+                stepCounter: 0d333458-70c7-4d11-bdf9-34d1d1b2c236
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9be63d16-00e3-454c-a51d-e0363a45263b
+          stepCounter: 5f2783dd-8686-40bd-9ffd-21375a8bb74e
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        name: C_ACCTBAL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4c955f8e-3717-4b88-ae08-d5015e6e9d19
+                stepCounter: 0d333458-70c7-4d11-bdf9-34d1d1b2c236
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: HUB_CUSTOMER
+          - locationName: DWH
+            nodeName: HUB_ORDER
+          - locationName: DWH
+            nodeName: LINK_ORDER_CUSTOMER
+          - locationName: DWH
+            nodeName: SATV1_CUSTOMER_DETAILS
+          - locationName: DWH
+            nodeName: SATV1_ORDERS
+        join:
+          joinCondition: |-
+            --Link to hub customer
+            FROM {{ ref('DWH', 'LINK_ORDER_CUSTOMER') }} "LINK_ORDER_CUSTOMER"
+            join {{ ref('DWH', 'HUB_CUSTOMER') }} "HUB_CUSTOMER"
+            on "LINK_ORDER_CUSTOMER"."SHA1_HUB_CUSTOMER" = "HUB_CUSTOMER"."SHA1_HUB_CUSTOMER"
+            -- hub customer to satellite customer
+            join {{ ref('DWH', 'SATV1_CUSTOMER_DETAILS') }} "SATV1_CUSTOMER_DETAILS"
+            on "HUB_CUSTOMER"."SHA1_HUB_CUSTOMER" = "SATV1_CUSTOMER_DETAILS"."SHA1_HUB_CUSTOMER"
+            -- link to hub order
+            join {{ ref('DWH', 'HUB_ORDER') }} "HUB_ORDER"
+            on "LINK_ORDER_CUSTOMER"."SHA1_HUB_ORDER"="HUB_ORDER"."SHA1_HUB_ORDER"
+            -- hub order to satellite order
+            join {{ ref('DWH', 'SATV1_ORDERS') }}
+            on "HUB_ORDER"."SHA1_HUB_ORDER" = "SATV1_ORDERS"."SHA1_HUB_ORDER"
+        name: V_ORDER_CUSTOMER
+        noLinkRefs: []
+  name: V_ORDER_CUSTOMER
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

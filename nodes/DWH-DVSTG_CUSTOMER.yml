@@ -38,6 +38,27 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
+          columnCounter: 0f6c055f-10aa-4a69-8254-ff90fbbbbda8
+          stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: 6fc1f428-2808-48f6-af94-2aeadbab4522
+            stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+          - columnCounter: 05d488ac-ca66-4235-b986-dd17229eefb0
+            stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
+        name: CUSTOMER_ADDRESS_HASH_DIFF
+        nullable: true
+        sourceColumnReferences: []
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
           columnCounter: f64eb194-b608-4cd1-8ecf-d3badfd0ca38
           stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
         config: {}
@@ -49,10 +70,6 @@ operation:
         hashedColumns:
           - columnCounter: 0b865501-3d05-489c-8c7d-dba33b8d30bc
             stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
-          - columnCounter: 6fc1f428-2808-48f6-af94-2aeadbab4522
-            stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
-          - columnCounter: 05d488ac-ca66-4235-b986-dd17229eefb0
-            stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
           - columnCounter: 0a8fd167-11bc-4c50-8055-9632092e5c1f
             stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
           - columnCounter: 1020961d-c1a7-4e17-83c8-b63c65f6e46a
@@ -61,7 +78,7 @@ operation:
             stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
           - columnCounter: 27615086-bb33-4397-9ac3-9ee6dd7d8172
             stepCounter: b8569753-683b-4d01-b53e-746ea2d0557b
-        name: CUSTOMER_HASH_DIFF
+        name: CUSTOMER_DETAILS_HASH_DIFF
         nullable: true
         sourceColumnReferences: []
       - appliedColumnTests: {}
