@@ -1,0 +1,95 @@
+fileVersion: 1
+id: 75159f6e-2255-40c1-aa7c-f142ec8e05fb
+name: HUB_ORDERS
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2970274-e3fa-4057-a6ae-3bd2d9e5e68e
+          stepCounter: 75159f6e-2255-40c1-aa7c-f142ec8e05fb
+        config:
+          is_Hub_hk: true
+        dataType: STRING
+        description: ""
+        name: SHA1_HUB_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c115aac6-3e40-4097-9055-8b1519777715
+                stepCounter: d12b47b6-0020-48bc-adb2-8ecddffc8810
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8907e9b9-ee77-4b07-a9ce-7e66c96b011e
+          stepCounter: 75159f6e-2255-40c1-aa7c-f142ec8e05fb
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: O_ORDERKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5a18b89f-e74d-4058-8eb9-bb1646b5c821
+                stepCounter: d12b47b6-0020-48bc-adb2-8ecddffc8810
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65a608e8-2bc1-41bb-913b-125b4ba117ef
+          stepCounter: 75159f6e-2255-40c1-aa7c-f142ec8e05fb
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d29bc25e-c1b6-42b6-a812-0e5fdf4a44a2
+                stepCounter: d12b47b6-0020-48bc-adb2-8ecddffc8810
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f30b18f1-ddb2-4ece-827e-79d4caf82d59
+          stepCounter: 75159f6e-2255-40c1-aa7c-f142ec8e05fb
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 06638542-bc44-48ca-9d81-fa886c31a101
+                stepCounter: d12b47b6-0020-48bc-adb2-8ecddffc8810
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: DVSTG_ORDERS
+        join:
+          joinCondition: FROM {{ ref('DWH', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
+        name: HUB_ORDERS
+        noLinkRefs: []
+  name: HUB_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: data-vault:::6
+  type: sql
+  version: 1
+type: Node
