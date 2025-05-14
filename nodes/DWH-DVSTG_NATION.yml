@@ -33,6 +33,29 @@ operation:
         name: HK_NATION
         nullable: true
         sourceColumnReferences: []
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 736a14a1-498b-4113-97f5-c24ebee65d8b
+          stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: 16b13a00-e4cf-433a-a174-c4c749f5ece2
+            stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+          - columnCounter: e567fb72-da2b-45ab-86ad-cb41ac753207
+            stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+          - columnCounter: 85fd3d21-ec6f-44e8-94ae-2cbd3c01834a
+            stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        name: HD_NATION
+        nullable: true
+        sourceColumnReferences: []
       - appliedColumnTests: {}
         columnReference:
           columnCounter: c2e3a8ce-b96b-458e-b2f1-cd8c184bdee5

@@ -45,34 +45,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 92737747-91b0-497b-a02c-d0af516681ad
-          stepCounter: c9d98418-7646-4d45-b2bd-8c0ce129c9ad
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: O_ORDERKEY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 03aa4430-d7f7-4993-b3e3-a9e0655f66b9
-                stepCounter: 7381b2ce-39db-427b-a090-e0845f1b5dc5
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: c5349600-89f6-4a7e-83a5-d22ade21d14a
-          stepCounter: c9d98418-7646-4d45-b2bd-8c0ce129c9ad
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: O_CUSTKEY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: d56915fd-493c-4611-ac50-e28030e34b6a
-                stepCounter: 7381b2ce-39db-427b-a090-e0845f1b5dc5
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 9dba80fb-2736-4dec-9198-a94bd5da0f13
           stepCounter: c9d98418-7646-4d45-b2bd-8c0ce129c9ad
         config: {}

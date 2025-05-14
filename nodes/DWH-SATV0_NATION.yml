@@ -1,0 +1,138 @@
+fileVersion: 1
+id: b85328c5-8a37-4958-a2de-53f197674924
+name: SATV0_NATION
+operation:
+  config:
+    disable_hwm: false
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 108b8c40-275f-4dc3-8796-8d22d4c505f9
+          stepCounter: b85328c5-8a37-4958-a2de-53f197674924
+        config:
+          is_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_NATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: beb92821-d319-4b74-9572-f06f003d279a
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8706e63-ac66-4343-8cd4-fb7883ad3ae1
+          stepCounter: b85328c5-8a37-4958-a2de-53f197674924
+        config:
+          is_hd: true
+        dataType: STRING
+        description: ""
+        name: HD_NATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 736a14a1-498b-4113-97f5-c24ebee65d8b
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: af6cc879-b734-4754-a3c3-fc59211178d1
+          stepCounter: b85328c5-8a37-4958-a2de-53f197674924
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: N_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16b13a00-e4cf-433a-a174-c4c749f5ece2
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: af3c10ce-7fc4-4a31-954a-0b56b5e16966
+          stepCounter: b85328c5-8a37-4958-a2de-53f197674924
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e567fb72-da2b-45ab-86ad-cb41ac753207
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe0adefb-ee03-4356-bcef-49272b293807
+          stepCounter: b85328c5-8a37-4958-a2de-53f197674924
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 85fd3d21-ec6f-44e8-94ae-2cbd3c01834a
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75863650-dbbb-435d-a79e-19bbb774555e
+          stepCounter: b85328c5-8a37-4958-a2de-53f197674924
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6b855f45-ecfc-4bd0-89f5-f15d02672acf
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 677dd51d-fa3d-4510-92d7-077951541c85
+          stepCounter: b85328c5-8a37-4958-a2de-53f197674924
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 397aee0d-93dd-47c3-bc58-82d71e34c5c3
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: DVSTG_NATION
+        join:
+          joinCondition: FROM {{ ref('DWH', 'DVSTG_NATION') }} "DVSTG_NATION"
+        name: SATV0_NATION
+        noLinkRefs: []
+  name: SATV0_NATION
+  overrideSQL: false
+  schema: ""
+  sqlType: data-vault:::8
+  type: sql
+  version: 1
+type: Node
