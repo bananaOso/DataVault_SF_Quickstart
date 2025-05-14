@@ -1,0 +1,126 @@
+fileVersion: 1
+id: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+name: DVSTG_NATION
+operation:
+  config:
+    contains_multiactive_data: false
+    generate_ghost_records: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c2e3a8ce-b96b-458e-b2f1-cd8c184bdee5
+          stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ecbfebde-b544-4f4d-a1c1-d4a630cce4c3
+                stepCounter: 7a4d64da-a545-4d3b-aae1-948bd13a529c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16b13a00-e4cf-433a-a174-c4c749f5ece2
+          stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: N_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1cdd2724-3480-4c67-95b5-da5307a614a4
+                stepCounter: 7a4d64da-a545-4d3b-aae1-948bd13a529c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e567fb72-da2b-45ab-86ad-cb41ac753207
+          stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e889ebeb-0e28-4cee-aa73-cb1e6eba5e99
+                stepCounter: 7a4d64da-a545-4d3b-aae1-948bd13a529c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85fd3d21-ec6f-44e8-94ae-2cbd3c01834a
+          stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee93744d-e378-4a18-8c16-0fcb1b01dcc7
+                stepCounter: 7a4d64da-a545-4d3b-aae1-948bd13a529c
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b855f45-ecfc-4bd0-89f5-f15d02672acf
+          stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        is_system_ldts: true
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SYSDATE()
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 397aee0d-93dd-47c3-bc58-82d71e34c5c3
+          stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The Record Source (RSRC) describes the source of this data.
+        is_system_rsrc: true
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{record_source()}}"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: NATION
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'NATION') }} "NATION"
+        name: DVSTG_NATION
+        noLinkRefs: []
+  name: DVSTG_NATION
+  overrideSQL: false
+  schema: ""
+  sqlType: data-vault:::4
+  type: sql
+  version: 1
+type: Node
