@@ -14,6 +14,25 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: beb92821-d319-4b74-9572-f06f003d279a
+          stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: c2e3a8ce-b96b-458e-b2f1-cd8c184bdee5
+            stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
+        name: HK_NATION
+        nullable: true
+        sourceColumnReferences: []
       - appliedColumnTests: {}
         columnReference:
           columnCounter: c2e3a8ce-b96b-458e-b2f1-cd8c184bdee5

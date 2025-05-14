@@ -14,6 +14,96 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e3e0ac2-4e06-4f57-a2bb-3a04c8b384bd
+          stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: 6272006a-a113-4c87-94d6-b817bff84c5d
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+        name: HK_ORDERS
+        nullable: true
+        sourceColumnReferences: []
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6cf787a-da88-4a09-88f6-682d653d0608
+          stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: 467d4852-0cc5-42ee-b3de-9654b1c7a888
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+        name: HK_CUSTOMER
+        nullable: true
+        sourceColumnReferences: []
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a54da563-6c74-4c7d-8d90-5454e713bbe9
+          stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: 6272006a-a113-4c87-94d6-b817bff84c5d
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+          - columnCounter: 467d4852-0cc5-42ee-b3de-9654b1c7a888
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+        name: HK_ORDERS_CUSTOMER
+        nullable: true
+        sourceColumnReferences: []
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40724cf1-a9ee-41dd-861b-ef4e31fc6ea9
+          stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: 0a2eafa7-4881-42d3-a7a4-ab4c5766157a
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+          - columnCounter: 085c376d-7adc-4964-bd2b-a6868702c2c6
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+          - columnCounter: 2d6f206b-ea41-4145-b658-8d1ed33a5288
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+          - columnCounter: b4f6f961-fe38-4042-a1b9-217b5c7c4780
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+          - columnCounter: 2f961ad5-fa1e-41e8-87be-c88e41d76904
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+          - columnCounter: 3c2102dc-99eb-4f9a-ba3e-f1d68141c9f9
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+          - columnCounter: 6747ed24-7f50-457f-8f90-530f756178e4
+            stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+        name: HD_ORDERS
+        nullable: true
+        sourceColumnReferences: []
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 6272006a-a113-4c87-94d6-b817bff84c5d

@@ -1,0 +1,109 @@
+fileVersion: 1
+id: 835b8d67-2cd3-47b9-a468-5dddd786fdff
+name: LINK_ORDERS_CUSTOMER
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bca36964-9a1a-4cd0-aa81-16d724277e12
+          stepCounter: 835b8d67-2cd3-47b9-a468-5dddd786fdff
+        config:
+          is_Link_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_ORDERS_CUSTOMER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a54da563-6c74-4c7d-8d90-5454e713bbe9
+                stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba5bec8c-a026-4ae6-bfd2-4e59287f4e9a
+          stepCounter: 835b8d67-2cd3-47b9-a468-5dddd786fdff
+        config: {}
+        dataType: STRING
+        description: ""
+        name: HK_ORDERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0e3e0ac2-4e06-4f57-a2bb-3a04c8b384bd
+                stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9dad160a-f54c-4069-884b-622ef226c885
+          stepCounter: 835b8d67-2cd3-47b9-a468-5dddd786fdff
+        config: {}
+        dataType: STRING
+        description: ""
+        name: HK_CUSTOMER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c6cf787a-da88-4a09-88f6-682d653d0608
+                stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f3f4ba5-d525-4ae1-88a2-d8283f72e44c
+          stepCounter: 835b8d67-2cd3-47b9-a468-5dddd786fdff
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f5f65b5-5523-4031-8f6d-434aa2a65dd9
+                stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65ff67c8-0fac-456c-b919-371fe6751e78
+          stepCounter: 835b8d67-2cd3-47b9-a468-5dddd786fdff
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a0b9c28d-4293-41ed-b348-59dc7b55f219
+                stepCounter: a09b6e28-456f-40bf-b5af-9d227eadbe39
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: DVSTG_ORDERS
+        join:
+          joinCondition: FROM {{ ref('DWH', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
+        name: LINK_ORDERS_CUSTOMER
+        noLinkRefs: []
+  name: LINK_ORDERS_CUSTOMER
+  overrideSQL: false
+  schema: ""
+  sqlType: data-vault:::7
+  type: sql
+  version: 1
+type: Node
