@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 12bf6fed-217f-4451-8779-a1456e0d313a
+id: 59ee766c-4a95-4ef4-8d5d-9fc2edc71049
 name: LINK_CUSTOMER_NATION
 operation:
   config:
@@ -18,8 +18,23 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 5bcae1b9-9db5-41b8-8c87-a9d35b8c7d11
-          stepCounter: 12bf6fed-217f-4451-8779-a1456e0d313a
+          columnCounter: 61ad36f3-b567-4335-9026-8c9fb7b2eaf3
+          stepCounter: 59ee766c-4a95-4ef4-8d5d-9fc2edc71049
+        config:
+          is_Link_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_CUSTOMER_NATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0dd0cd4e-3f33-47ca-b5ba-ab3c539b3d8c
+                stepCounter: 40f4f2e7-d8c4-4bcc-b2f3-bdb5306eb2f5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4272ec05-550e-4742-a5da-3798eb7bf734
+          stepCounter: 59ee766c-4a95-4ef4-8d5d-9fc2edc71049
         config: {}
         dataType: STRING
         description: ""
@@ -27,13 +42,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 7ce95fe1-7b12-477b-90df-41a727f60470
-                stepCounter: c2ad3837-82f8-4c0b-b592-2a65c0ceeed1
+              - columnCounter: 17922616-fb7a-4371-a3df-8c95435d1d7d
+                stepCounter: 40f4f2e7-d8c4-4bcc-b2f3-bdb5306eb2f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8dab60ff-ef1a-4934-9af4-9ebd7e48bf77
-          stepCounter: 12bf6fed-217f-4451-8779-a1456e0d313a
+          columnCounter: f671774c-09b1-44f0-8f94-4c7d50fe2398
+          stepCounter: 59ee766c-4a95-4ef4-8d5d-9fc2edc71049
         config: {}
         dataType: STRING
         description: ""
@@ -41,28 +56,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 18b1510a-ec74-4e5f-aedc-42538f14cebe
-                stepCounter: c2ad3837-82f8-4c0b-b592-2a65c0ceeed1
+              - columnCounter: 6a894b1a-dfd7-4aca-918b-cafa8945a78c
+                stepCounter: 40f4f2e7-d8c4-4bcc-b2f3-bdb5306eb2f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 0fceec88-f990-4dca-bd60-95a1141ecde4
-          stepCounter: 12bf6fed-217f-4451-8779-a1456e0d313a
-        config:
-          is_Link_hk: true
-        dataType: STRING
-        description: ""
-        name: HK_CUSTOMER_NATION_L
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: b195b369-c63a-4443-8d43-30168f5cbddc
-                stepCounter: c2ad3837-82f8-4c0b-b592-2a65c0ceeed1
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 15672ecd-471f-44b8-a8cc-f7a8982e71d5
-          stepCounter: 12bf6fed-217f-4451-8779-a1456e0d313a
+          columnCounter: 67680b2d-a4b3-4a35-933d-2e050385619b
+          stepCounter: 59ee766c-4a95-4ef4-8d5d-9fc2edc71049
         config: {}
         dataType: TIMESTAMP
         description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
@@ -70,13 +70,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 7d8e3b1a-e1c5-47c4-bd6a-02bc6d73f700
-                stepCounter: c2ad3837-82f8-4c0b-b592-2a65c0ceeed1
+              - columnCounter: ccd6361c-8ce1-4920-997d-9bcdf9d9e9ce
+                stepCounter: 40f4f2e7-d8c4-4bcc-b2f3-bdb5306eb2f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 54e9d17c-8e01-4d75-bcad-2c4fddc22184
-          stepCounter: 12bf6fed-217f-4451-8779-a1456e0d313a
+          columnCounter: e684f62d-aaed-423e-9068-bf4125b87394
+          stepCounter: 59ee766c-4a95-4ef4-8d5d-9fc2edc71049
         config: {}
         dataType: STRING
         description: The Record Source (RSRC) describes the source of this data.
@@ -84,20 +84,25 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 467fd933-f3ad-4c3b-a858-0a79e0a49463
-                stepCounter: c2ad3837-82f8-4c0b-b592-2a65c0ceeed1
+              - columnCounter: 95924996-97e8-4d17-8dc4-302f269e6d92
+                stepCounter: 40f4f2e7-d8c4-4bcc-b2f3-bdb5306eb2f5
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          DVSTG_CUSTOMER: 40f4f2e7-d8c4-4bcc-b2f3-bdb5306eb2f5
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: DWH
             nodeName: DVSTG_CUSTOMER
+          - locationName: DWH
+            nodeName: HUB_NATION
         join:
-          joinCondition: FROM {{ ref('DWH', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
+          joinCondition: |-
+            FROM {{ ref('DWH', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
+            {{ref_link('DWH','HUB_NATION')}}
         name: LINK_CUSTOMER_NATION
         noLinkRefs: []
   name: LINK_CUSTOMER_NATION
