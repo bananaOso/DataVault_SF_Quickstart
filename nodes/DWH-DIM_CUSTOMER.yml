@@ -13,7 +13,12 @@ operation:
   locationName: DWH
   materializationType: table
   metadata:
-    appliedNodeTests: []
+    appliedNodeTests:
+      - continueOnFailure: true
+        description: ""
+        name: Test
+        runOrder: After
+        templateString: "{{testUtils.expect_column_values_to_match_regex('{{this}}','C_PHONE','^\\d{2}-\\d{3}-\\d{3}-\\d{4}$',isRaw=True)}}"
     columns:
       - acceptedValues:
           strictMatch: true
