@@ -1,6 +1,6 @@
 fileVersion: 1
-id: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
-name: HUB_ORDER
+id: 0129ea17-b2fe-499e-9e90-3698be2de7c2
+name: HUB_NATION
 operation:
   config:
     disable_hwm: true
@@ -18,37 +18,37 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 7a27fb15-80a7-442b-ab1b-1c28937385fa
-          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+          columnCounter: ad8d01ae-e44a-4d8e-99ab-946e13d13d99
+          stepCounter: 0129ea17-b2fe-499e-9e90-3698be2de7c2
         config:
           is_Hub_hk: true
         dataType: STRING
         description: ""
-        name: SHA1_HUB_ORDER
+        name: HK_NATION
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 0bb000a4-9cbe-40d4-93e9-60cf28c03154
-                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+              - columnCounter: beb92821-d319-4b74-9572-f06f003d279a
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 730ae58d-cbde-420f-b529-2ddd7374dbbe
-          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+          columnCounter: 1074e782-a7ea-47b9-b31b-9b873f095e10
+          stepCounter: 0129ea17-b2fe-499e-9e90-3698be2de7c2
         config: {}
         dataType: NUMBER(38,0)
         description: ""
-        name: O_ORDERKEY
-        nullable: true
+        name: N_NATIONKEY
+        nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: acac9d65-9985-4606-9f51-b496cab0c154
-                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+              - columnCounter: c2e3a8ce-b96b-458e-b2f1-cd8c184bdee5
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 92b63739-55e4-497b-b815-5e43d047ac57
-          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+          columnCounter: 46c29deb-613d-4f0e-b390-4c76cf8c995f
+          stepCounter: 0129ea17-b2fe-499e-9e90-3698be2de7c2
         config: {}
         dataType: TIMESTAMP
         description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
@@ -56,13 +56,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 1b38cec1-f626-48bf-9d40-73f372456fb2
-                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+              - columnCounter: 6b855f45-ecfc-4bd0-89f5-f15d02672acf
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 101d7162-e716-4d8e-bcd3-169566f48953
-          stepCounter: e0dff0dc-48a8-4a85-b007-f99ce72a39f2
+          columnCounter: 592156c8-1caf-45bc-bb8a-928cf616fa1a
+          stepCounter: 0129ea17-b2fe-499e-9e90-3698be2de7c2
         config: {}
         dataType: STRING
         description: The Record Source (RSRC) describes the source of this data.
@@ -70,8 +70,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 31e4760f-daf2-4eee-8dec-46b6eb2938f0
-                stepCounter: 6422c22a-f6b2-431c-8315-299eb26944da
+              - columnCounter: 397aee0d-93dd-47c3-bc58-82d71e34c5c3
+                stepCounter: 581a455a-c32d-4a7d-af39-3fd47d8be33c
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
@@ -81,12 +81,12 @@ operation:
           customSQL: ""
         dependencies:
           - locationName: DWH
-            nodeName: DVSTG_ORDERS
+            nodeName: DVSTG_NATION
         join:
-          joinCondition: FROM {{ ref('DWH', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
-        name: HUB_ORDER
+          joinCondition: FROM {{ ref('DWH', 'DVSTG_NATION') }} "DVSTG_NATION"
+        name: HUB_NATION
         noLinkRefs: []
-  name: HUB_ORDER
+  name: HUB_NATION
   overrideSQL: false
   schema: ""
   sqlType: data-vault:::6
